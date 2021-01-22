@@ -1,0 +1,585 @@
+Execução de todos os comandos vistos na nossa suuuper aula de SQL 
+
+-- comando utilizado para criar o database
+-- create database itau;
+-- comando utilizado para por o database em uso
+use itau;
+
+-- permite criar uma tabela no banco de dados 
+create table itau.clientes(
+codigo_cliente integer not null primary key,
+nome_cliente varchar(50) not null,
+idade_cliente integer(3) not null,
+email_cliente varchar(80) not null
+);
+
+-- permite demonstrar todos os registros dentro da nossa tabela
+select * from itau.clientes;
+
+-- mostrar a estrutura da nossa tabela no banco de dados 
+describe itau.clientes;
+
+-- inserindo dados na estrutura da nossa tabela 
+insert into itau.clientes
+(codigo_cliente,nome_cliente,idade_cliente,email_cliente)
+values
+(1,"Daniel Ferrao",25,"daniel.f@unibanco.com.br"),
+(2,"Maria Estella Dias",22,"maria.e@unibanco.com.br"),
+(3,"Simone",24,"simone@unibanco.com.br"),
+(4,"Gabriel",19,"gabriel@unibanco.com.br");
+
+select * from itau.clientes;
+
+use itau;
+
+INSERT INTO `clientes` (`codigo_cliente`,`nome_cliente`,`idade_cliente`,`email_cliente`) VALUES (5,"Hilary James",50,"sit@id.org"),(6,"Mohammad Keller",72,"magna@vestibulummassarutrum.org"),(7,"Xena Ellis",23,"Curabitur.consequat.lectus@blanditcongueIn.co.uk"),(8,"Kasimir Duncan",75,"dolor@velitegestaslacinia.com"),(9,"Malik Dickerson",37,"euismod.urna@tellusimperdietnon.net"),(10,"Medge Beach",62,"augue.eu@ipsum.ca"),(11,"Kelsey Molina",25,"Curabitur.ut.odio@sollicitudinamalesuada.edu"),(12,"Kane Maxwell",59,"Proin.vel.nisl@semperduilectus.edu"),(13,"Carla W. Jordan",96,"Sed.pharetra.felis@blanditNamnulla.com"),(14,"Frances Herrera",31,"Pellentesque.tincidunt@iaculisaliquet.org");
+INSERT INTO `clientes` (`codigo_cliente`,`nome_cliente`,`idade_cliente`,`email_cliente`) VALUES (15,"Arsenio D. Hubbard",100,"Ut.tincidunt@temporaugueac.edu"),(16,"Avram Higgins",40,"semper.cursus.Integer@veliteusem.com"),(17,"Kareem S. Lara",51,"Aliquam.erat.volutpat@eunibhvulputate.ca"),(18,"Armand Y. Curry",80,"tincidunt.pede@vitaevelitegestas.com"),(19,"Nichole Austin",87,"elementum.dui@quamCurabitur.com"),(20,"Steven P. Fuentes",78,"libero.Proin@atliberoMorbi.com"),(21,"Lewis M. Watts",45,"Donec@temporlorem.co.uk"),(22,"Linda Velez",51,"mauris.eu.elit@ut.net"),(23,"Fulton B. Noel",93,"amet.ante@necurna.org"),(24,"Rafael Nieves",58,"tellus.sem@Curabiturut.co.uk");
+INSERT INTO `clientes` (`codigo_cliente`,`nome_cliente`,`idade_cliente`,`email_cliente`) VALUES (25,"Burke J. Tillman",46,"sagittis@blandit.ca"),(26,"Frances T. Mcfarland",55,"tristique.neque@semegetmassa.org"),(27,"Hector M. Mendoza",68,"aptent@sociisnatoquepenatibus.com"),(28,"Hollee R. Rivas",98,"suscipit@orciPhasellus.net"),(29,"Uriah Banks",59,"tempor.augue@tempus.edu"),(30,"Hamish J. Houston",30,"vulputate.eu.odio@urnajustofaucibus.edu"),(31,"Beverly Z. Shields",55,"ut.erat@risusvariusorci.net"),(32,"Nolan Watson",76,"Aliquam.ornare@nisl.ca"),(33,"Hermione Schneider",18,"lacus@enimnislelementum.org"),(34,"Troy Briggs",36,"Cras@acliberonec.edu");
+INSERT INTO `clientes` (`codigo_cliente`,`nome_cliente`,`idade_cliente`,`email_cliente`) VALUES (35,"Brennan O. Marshall",36,"hendrerit@duiquis.org"),(36,"Driscoll X. Humphrey",50,"massa.Suspendisse@enimsitamet.co.uk"),(37,"Ariel E. Church",78,"magna.Lorem@sagittis.org"),(38,"Prescott Blankenship",58,"erat@mauris.org"),(39,"Brynn F. Baldwin",66,"sodales@ullamcorperviverra.ca"),(40,"Raja Young",49,"turpis.Aliquam.adipiscing@blandit.org"),(41,"Quyn Dixon",55,"Sed.molestie.Sed@Sed.edu"),(42,"Calista Whitney",98,"lobortis.ultrices.Vivamus@tempusnonlacinia.co.uk"),(43,"Stella Sheppard",94,"ornare.lectus@enimmitempor.org"),(44,"Quinn F. Hickman",19,"mollis.non@elementumdui.com");
+INSERT INTO `clientes` (`codigo_cliente`,`nome_cliente`,`idade_cliente`,`email_cliente`) VALUES (45,"Maisie I. Curry",64,"nulla@FuscemollisDuis.co.uk"),(46,"Deanna Abbott",29,"lorem@arcuVivamus.ca"),(47,"Grady Nolan",77,"magna.sed.dui@utnisia.edu"),(48,"Hedda G. Bowman",68,"lacinia.Sed.congue@tristiquesenectus.ca"),(49,"Octavius H. Garrison",87,"ac.turpis@pharetra.co.uk"),(50,"Whilemina K. Eaton",36,"enim.condimentum.eget@euturpisNulla.edu"),(51,"Tamekah Miranda",90,"Morbi.non.sapien@eudui.com"),(52,"Kiara Lamb",54,"dictum.ultricies.ligula@etipsumcursus.org"),(53,"Jena J. Avila",34,"Vivamus@elita.edu"),(54,"Walker Bolton",66,"Aenean.eget.magna@tempus.com");
+INSERT INTO `clientes` (`codigo_cliente`,`nome_cliente`,`idade_cliente`,`email_cliente`) VALUES (55,"Jaime V. Hewitt",41,"aliquam.adipiscing@natoquepenatibus.com"),(56,"Oleg Mccarthy",69,"mattis@turpisnonenim.co.uk"),(57,"Amos Mccray",48,"amet.ultricies@amet.edu"),(58,"Clare B. Sawyer",75,"mollis.dui@Loremipsumdolor.org"),(59,"Leroy G. Mcintosh",28,"mattis@aliquamenimnec.org"),(60,"Blossom O. Boone",21,"pede.Nunc@quam.co.uk"),(61,"Quon V. Sharpe",20,"aliquet.diam@purusDuis.com"),(62,"Ignatius Compton",29,"sollicitudin@elitpedemalesuada.co.uk"),(63,"Giacomo Chang",82,"ipsum.primis.in@facilisisSuspendissecommodo.org"),(64,"Walter Gallagher",33,"ut.dolor@magnaPraesentinterdum.org");
+INSERT INTO `clientes` (`codigo_cliente`,`nome_cliente`,`idade_cliente`,`email_cliente`) VALUES (65,"Jared Cabrera",26,"vehicula.et.rutrum@a.co.uk"),(66,"Buckminster O. Pitts",30,"placerat.orci.lacus@ac.org"),(67,"Unity Wiley",37,"Quisque.ac.libero@Aliquamvulputateullamcorper.co.uk"),(68,"Haley Frazier",20,"eget.ipsum@auctorvelitAliquam.edu"),(69,"Jamal R. Mosley",94,"Curabitur@sociis.ca"),(70,"Xavier J. Myers",61,"ante.blandit.viverra@vitae.com"),(71,"Joshua Dejesus",68,"adipiscing@atrisus.co.uk"),(72,"Joel D. Kirk",37,"malesuada@tempus.net"),(73,"Dexter Y. Deleon",84,"cubilia.Curae@porttitorinterdum.com"),(74,"Elijah I. Cole",91,"sociis.natoque.penatibus@sit.ca");
+INSERT INTO `clientes` (`codigo_cliente`,`nome_cliente`,`idade_cliente`,`email_cliente`) VALUES (75,"Emmanuel H. Merrill",22,"ligula.Nullam.enim@dapibusidblandit.com"),(76,"Wynter Whitehead",79,"at.nisi.Cum@leo.net"),(77,"Idona E. Willis",40,"Phasellus.nulla@felisorciadipiscing.edu"),(78,"Zeus George",98,"Pellentesque@aliquet.net"),(79,"Davis Patel",62,"sem.eget@metusInlorem.org"),(80,"Hollee Blanchard",90,"commodo@leo.com"),(81,"Abigail Horton",22,"mauris.eu@lectuspedeultrices.co.uk"),(82,"Zia Ingram",86,"neque.pellentesque.massa@tellusAenean.edu"),(83,"Lee S. Summers",56,"euismod@fringilla.ca"),(84,"Aristotle Y. Stout",80,"amet@euismod.org");
+INSERT INTO `clientes` (`codigo_cliente`,`nome_cliente`,`idade_cliente`,`email_cliente`) VALUES (85,"Dolan R. Sargent",26,"arcu@adipiscingelitEtiam.org"),(86,"Justin Britt",73,"imperdiet.non.vestibulum@lectusconvallisest.net"),(87,"Palmer Morales",37,"tincidunt.nunc.ac@elit.org"),(88,"Alan J. Patton",81,"ante@semperpretiumneque.org"),(89,"Kalia Kramer",30,"adipiscing.enim.mi@pulvinararcu.edu"),(90,"Kiara Mclaughlin",63,"quis.diam@ultricesmauris.co.uk"),(91,"Kellie Webb",92,"tincidunt@Ut.edu"),(92,"Hilary Shelton",53,"et@auctorvitaealiquet.org"),(93,"Delilah H. Hinton",51,"pharetra.Quisque.ac@diam.edu"),(94,"Kimberly Molina",85,"et.magna.Praesent@liberoatauctor.edu");
+INSERT INTO `clientes` (`codigo_cliente`,`nome_cliente`,`idade_cliente`,`email_cliente`) VALUES (95,"Guinevere O. Valentine",58,"iaculis.lacus.pede@urnanecluctus.edu"),(96,"Amir H. Garner",84,"Etiam@consequatlectussit.co.uk"),(97,"Nayda Mcclure",38,"consectetuer.euismod.est@vulputatedui.ca"),(98,"Peter Mckenzie",41,"ipsum.non@ategestasa.com"),(99,"MacKenzie G. Paul",37,"libero.Proin.sed@adipiscinglobortisrisus.com"),(100,"Yvonne Hart",52,"Donec.luctus.aliquet@amet.co.uk"),(101,"Dahlia Robles",88,"Nullam@AliquamnislNulla.org"),(102,"Barry U. England",89,"auctor@tristiquepellentesquetellus.edu"),(103,"Rashad White",61,"vel.est.tempor@accumsan.com"),(104,"Clinton C. Mcconnell",66,"tincidunt.pede.ac@diamnuncullamcorper.ca");
+
+select * from itau.clientes;
+
+select nome_cliente,idade_cliente,email_cliente from itau.clientes order by nome_cliente;
+
+select * from itau.clientes where idade_cliente>=18 and idade_cliente<=30 order by idade_cliente;
+select count(*) as Total_Clientes from itau.clientes where idade_cliente>=18 and idade_cliente<=30;
+
+select min(idade_cliente) from itau.clientes;
+select * from itau.clientes where idade_cliente=18;
+
+select * from itau.clientes where idade_cliente = (select min(idade_cliente) from itau.clientes);
+
+select * from itau.clientes where idade_cliente = (select max(idade_cliente) from itau.clientes);
+
+select * from itau.clientes where codigo_cliente=1;
+
+select * from itau.clientes where idade_cliente in(20,30,40) order by idade_cliente desc;
+
+alter table itau.clientes add endereco varchar(50) not null;
+
+select * from itau.clientes;
+
+alter table itau.clientes drop endereco;
+alter table itau.clientes rename column endereco_clientes to endereco_cliente;
+
+update itau.clientes set endereco = "Rua Catão" where codigo_cliente=1;
+
+update itau.clientes set endereco_cliente= "Atualizar Endereço" where endereco_cliente<>"Rua Catão";
+update itau.clientes set bairro_cliente=" Atualizar Bairro";
+
+describe itau.clientes;
+
+alter table itau.clientes change column endereco_clientes endereco_cliente varchar(81) not null;
+
+alter table itau.clientes add bairro_cliente varchar(20) not null;
+-- alter table itau.clientes change bairro_cliente varchar(20) not null;
+
+alter table itau.clientes drop bairro_cliente;
+
+
+select * from itau.clientes where nome_cliente like "Maria%";
+select * from itau.clientes where nome_cliente like "Daniel%";
+
+select * from itau.clientes where nome_cliente like "%Dias";
+select * from itau.clientes where nome_cliente like "%M.%";
+
+select * from itau.clientes where nome_cliente like "C%";
+
+create table itau.bck_clientes select * from itau.clientes;
+
+select * from itau.bck_clientes;
+
+select count(*) from itau.bck_clientes;
+
+select * from itau.clientes;
+describe itau.clientes;
+
+delete from itau.clientes;
+
+insert into itau.clientes
+(codigo_cliente,nome_cliente,idade_cliente,email_cliente,endereco_cliente,bairro_cliente)
+select * from itau.bck_clientes; 
+
+rename table itau.bck_clientes to itau.cliente;
+
+alter table itau.cliente change column codigo_cliente codigo_cliente integer not null primary key;
+drop table itau.clientes;
+
+describe itau.cliente;
+
+
+drop table itau.clientes;
+
+rename table itau.cliente to itau.clientes;
+select * from itau.clientes;
+
+create table itau.bck_clientes select * from itau.clientes;
+create database unibanco;
+
+
+create table unibanco.clientes select * from itau.clientes;
+
+
+drop table itau.clientes;
+drop table itau.bck_clientes;
+
+
+
+
+create table itau.clientes(
+cod_cli int not null,
+nome_cli varchar(50) not null,
+cpf_cliente char(11) not null,
+endereco_cliente varchar(60) not null,
+bairro_cliente varchar(20) not null,
+estado_residencia_cliente char(2) not null,
+cep_cliente char(8) not null,
+agencia_cliente char(4) not null,
+conta_corrente_cliente char(8) not null,
+digito_verificador_cliente int(1) not null,
+ddd_cliente char(3) not null,
+telefone_cliente char(9) not null,
+email_cliente varchar(80) not null,
+data_modificacao_registro datetime,
+primary key (cod_cli,cpf_cliente)
+);
+
+describe itau.clientes;
+
+insert into itau.clientes
+(cod_cli,nome_cli,cpf_cliente,endereco_cliente,bairro_cliente,estado_residencia_cliente,cep_cliente,agencia_cliente,conta_corrente_cliente,digito_verificador_cliente,ddd_cliente,telefone_cliente,email_cliente,data_modificacao_registro)
+select codigo_cliente,nome_cliente,'atualizar',endereco_cliente,bairro_cliente,'xx','00000000','0191','0',0,'011','000000000',email_cliente,now() from unibanco.clientes;
+
+
+delete from itau.clientes;
+
+select * from itau.clientes;
+
+update itau.clientes set estado_residencia_cliente ="SP";
+
+
+create table itau.vendas(
+cod_venda int auto_increment primary key,
+produto_venda varchar(40) not null,
+quantidade_venda int(4) not null,
+preco_unitario_venda decimal(8,2) not null,
+nome_vendedor varchar(50) not null
+);
+
+insert into itau.vendas
+(produto_venda,quantidade_venda,preco_unitario_venda,nome_vendedor)
+values
+("Mouse",25,35.99,"Pedro"),
+("Teclado",30,42.50,"Marcos"),
+("PenDrive",100,38.00,"Cristina"),
+("Monitor",10,450.50,"Cristina"),
+("Impressora",5,385.50,"Marcos"),
+("Fonte",2,85.00,"Gustavo");
+
+select * from itau.vendas;
+
+SELECT 
+    cod_venda,
+    produto_venda,
+    quantidade_venda,
+    preco_unitario_venda,
+    (quantidade_venda * preco_unitario_venda) AS Total_Venda,
+    nome_vendedor
+FROM
+    itau.vendas;
+
+select sum(quantidade_venda * preco_unitario_venda) as Total_Venda_Produtos, nome_vendedor from itau.vendas group by nome_vendedor;
+
+use itau;
+CREATE TABLE `Produtos` (
+	`Cod_Prod` INT NOT NULL AUTO_INCREMENT,
+	`Nome_Prod` varchar(40) NOT NULL,
+	`Valor_Prod` DECIMAL(8,2) NOT NULL,
+	`Cod_Marca` INT NOT NULL,
+	PRIMARY KEY (`Cod_Prod`)
+);
+
+CREATE TABLE `Marcas` (
+	`Cod_Marca` INT NOT NULL AUTO_INCREMENT,
+	`Nome_Marca` varchar(40) NOT NULL,
+	PRIMARY KEY (`Cod_Marca`)
+);
+
+ALTER TABLE `Produtos` ADD CONSTRAINT `Produtos_fk0` FOREIGN KEY (`Cod_Marca`) REFERENCES `Marcas`(`Cod_Marca`);
+
+insert into itau.produtos
+(nome_prod,valor_prod,cod_marca)
+values
+-- ("Geladeira",1850.00,1);
+("Fogão",1250.00,1),
+("TV",1750.00,2),
+("Microondas",650.00,1),
+("Secador",180.00,3),
+("Ventilador",89.00,3),
+("Batedeira",210.00,4),
+("Liquidificador",89.50,4);
+
+insert into itau.marcas
+(nome_marca)
+values
+("Brastemp"),
+("Samsung"),
+("Cadence"),
+("Walita");
+
+
+select p.Nome_Prod,p.Valor_Prod,m.Nome_Marca
+from itau.produtos as p,
+itau.marcas as m
+where
+(p.Cod_Marca=m.Cod_Marca);
+
+select * from itau.clientes;
+
+create table itau.cargo(
+cod_cargo char(2) not null primary key,
+nome_cargo varchar(50) not null,
+valor_cargo decimal(8,2) not null
+);
+
+create table itau.funcionario(
+matricula int auto_increment not null,
+nome_funcionario varchar(50) not null,
+cod_cargo char(2) not null,
+primary key (matricula),
+foreign key (cod_cargo) references cargo(cod_cargo));
+
+
+insert into itau.cargo
+(cod_cargo,nome_cargo,valor_cargo)
+values
+("C1","Analista de Sistemas",6580.00),
+("C2","DBA em Banco de Dados",7800.00),
+("C3","Gerencia de CPD",5250.00),
+("C4","Suporte de Help Desk",4250.00),
+("C5","Jovem Aprendiz",2120.00);
+
+insert into itau.funcionario
+(nome_funcionario,cod_cargo)
+values
+("Douglas Caro","C2"),
+("Renato Alves","C2"),
+("Marina","C2"),
+("Lino","C4"),
+("Vinicius Ribeiro","C3");
+
+select f.nome_funcionario,f.matricula,c.nome_cargo,c.valor_cargo
+from itau.funcionario as f
+inner join itau.cargo as c
+on(f.cod_cargo=c.cod_cargo);
+
+select f.nome_funcionario,f.matricula,c.nome_cargo,c.valor_cargo
+from itau.funcionario as f
+right join itau.cargo as c
+on(f.cod_cargo=c.cod_cargo);
+
+select c.nome_cargo, count(f.cod_cargo) as Total_Funcionarios
+from itau.cargo as c
+left join itau.funcionario as f
+on(c.cod_cargo=f.cod_cargo)
+group by c.cod_cargo;
+
+ 
+create database backup_tabelas;
+
+use backup_tabelas;
+
+insert into itau.marcas
+(nome_marca)
+values
+("HP"),
+("Nokia"),
+("LG");
+
+
+backup_bancocall backup_tabelas.backup_banco();
+
+
+
+
+========================================================
+
+Criando vinculo entre tabelas utilizando o sql com inner join e left join
+
+select f.nome_funcionario,f.matricula,c.nome_cargo,c.valor_cargo
+from itau.funcionario as f
+inner join itau.cargo as c
+on(f.cod_cargo=c.cod_cargo);
+
+select f.nome_funcionario,f.matricula,c.nome_cargo,c.valor_cargo
+from itau.funcionario as f
+right join itau.cargo as c
+on(f.cod_cargo=c.cod_cargo);
+
+select c.nome_cargo, count(f.cod_cargo) as Total_Funcionarios
+from itau.cargo as c
+left join itau.funcionario as f
+on(c.cod_cargo=f.cod_cargo)
+group by c.cod_cargo;
+
+
+
+create table itau.cargo(
+cod_cargo char(2) not null primary key,
+nome_cargo varchar(50) not null,
+valor_cargo decimal(8,2) not null
+);
+
+create table itau.funcionario(
+matricula int auto_increment not null,
+nome_funcionario varchar(50) not null,
+cod_cargo char(2) not null,
+primary key (matricula),
+foreign key (cod_cargo) references cargo(cod_cargo));
+
+
+insert into itau.cargo
+(cod_cargo,nome_cargo,valor_cargo)
+values
+("C1","Analista de Sistemas",6580.00),
+("C2","DBA em Banco de Dados",7800.00),
+("C3","Gerencia de CPD",5250.00),
+("C4","Suporte de Help Desk",4250.00),
+("C5","Jovem Aprendiz",2120.00);
+
+insert into itau.funcionario
+(nome_funcionario,cod_cargo)
+values
+("Douglas Caro","C2"),
+("Renato Alves","C2"),
+("Marina","C2"),
+("Lino","C4"),
+("Vinicius Ribeiro","C3");
+
+
+
+vinculo entre as tabelas utilizando os selects com primary key e a foreing key
+
+select p.Nome_Prod,p.Valor_Prod,m.Nome_Marca
+from itau.produtos as p,
+itau.marcas as m
+where
+(p.Cod_Marca=m.Cod_Marca);
+
+
+
+insert para fazer o vinculo entre as duas tabelas
+
+insert into itau.produtos
+(nome_prod,valor_prod,cod_marca)
+values
+-- ("Geladeira",1850.00,1);
+("Fogão",1250.00,1),
+("TV",1750.00,2),
+("Microondas",650.00,1),
+("Secador",180.00,3),
+("Ventilador",89.00,3),
+("Batedeira",210.00,4),
+("Liquidificador",89.50,4);
+
+insert into itau.marcas
+(nome_marca)
+values
+("Brastemp"),
+("Samsung"),
+("Cadence"),
+("Walita");
+
+
+
+
+insert into itau.vendas
+(produto_venda,quantidade_venda,preco_unitario_venda,nome_vendedor)
+values
+("Mouse",25,35.99,"Pedro"),
+("Teclado",30,42.50,"Marcos"),
+("PenDrive",100,38.00,"Cristina"),
+("Monitor",10,450.50,"Cristina"),
+("Impressora",5,385.50,"Marcos"),
+("Fonte",2,85.00,"Gustavo");
+
+Nesta sintaxe estamos somando os produtos já aglutinados e fazendo a quebra por vendedores
+select sum(quantidade_venda * preco_unitario_venda) as Total_Venda_Produtos, nome_vendedor from itau.vendas group by nome_vendedor;
+
+
+
+Criando tabela de vendas para gerar cálculos
+
+create table itau.vendas(
+cod_venda int auto_increment primary key,
+produto_venda varchar(40) not null,
+quantidade_venda int(4) not null,
+preco_unitario_venda decimal(8,2) not null,
+nome_vendedor varchar(50) not null
+)
+
+Calculando o preço bruto por produtos.
+
+SELECT 
+    cod_venda,
+    produto_venda,
+    quantidade_venda,
+    preco_unitario_venda,
+    (quantidade_venda * preco_unitario_venda) AS Total_Venda,
+    nome_vendedor
+FROM
+    itau.vendas;
+
+
+Fazendo a normalização dos campos das tabelas do Unibanco x Itau
+insert into itau.clientes
+(codigo_cliente,nome_cliente,cpf_cliente,endereco_cliente,bairro_cliente,estado_residencia_cliente,cep_cliente,agencia_cliente,conta_corrente_cliente,digito_verificador_cliente,ddd_cliente,telefone_cliente,email_cliente,data_modificacao_registro)
+
+select codigo_cliente,nome_cliente,'atualizar',endereco_cliente,bairro_cliente,'xx','00000000','0191','0',0,'011','000000000',email_cliente,'2021-01-12 14:40:00' from unibanco.clientes;
+
+
+
+
+Nova tabela de clientes na estrutura do banco itau
+
+create table itau.clientes(
+codigo_cliente int not null,
+nome_cliente varchar(50) not null,
+cpf_cliente char(11) not null,
+endereco_cliente varchar(60) not null,
+bairro_cliente varchar(20) not null,
+estado_residencia_cliente char(2) not null,
+cep_cliente char(8) not null,
+agencia_cliente char(4) not null,
+conta_corrente_cliente char(8) not null,
+digito_verificador_cliente int(1) not null,
+ddd_cliente char(3) not null,
+telefone_cliente char(9) not null,
+email_cliente varchar(80) not null,
+data_modificacao_registro datetime,
+primary key (codigo_cliente,cpf_cliente)
+);
+
+
+
+1º Passo
+create database unibanco
+
+2º Passo
+create table unibanco.clientes select * from itau.clientes;
+
+3º Passo 
+Excluir todas as tabelas do itau
+drop table itau.clientes;
+drop table itau.bck_clientes;
+
+4º) Passo
+Iremos criar a nova tabela no itau
+
+
+
+Como fazer um backup da tabela com um único comando em SQL
+create table itau.bck_clientes select * from itau.clientes;
+
+
+Pondo uma tabela de backup a quente na produção 
+
+1º ) Passo  Renomear a tabela  
+rename table itau.bck_clientes to itau.cliente;
+
+2º) Passo Estruturar os campos que contem chave primária.
+alter table itau.cliente change column codigo_cliente codigo_cliente integer not null primary key;
+drop table itau.clientes
+
+3º) Passo exclui a tabela de produção que teve o problema
+drop table itau.clientes;
+
+4º) Passo foi renomeado a tabela para o nome padrão da tabela de produção.
+rename table itau.cliente to itau.clientes;
+
+5º) Passo vimos os dados novamente em produção
+select * from itau.clientes;
+
+
+
+-- Utilizando o percentual que trabalha como coringa junto ao comando like
+
+select * from itau.clientes where nome_cliente like "Maria%";
+select * from itau.clientes where nome_cliente like "Daniel%";
+
+select * from itau.clientes where nome_cliente like "%Dias";
+select * from itau.clientes where nome_cliente like "%M.%";
+
+select * from itau.clientes where nome_cliente like "C%";
+
+OBS: este procedimento acima é somente utilizado para tipo de dados caracter.
+
+
+-- atualizando o nome de um campo ou o tamanho do campo já com registros 
+-- alter table itau.clientes change column endereco_cliente endereco_clientes varchar(81) not null;
+
+--  atualizando os registros com conteúdos novos no campo de endereço.
+update itau.clientes set endereco_cliente= "Atualizar Endereço" where endereco_cliente<>"Rua Catão";
+
+--  atualizando os registros com conteúdos novos no campo bairro.
+update itau.clientes set bairro_cliente=" Atualizar Bairro";
+
+
+-- permite renomear os campos de uma tabela sem perder o conteúdo dos registros já inseridos.
+alter table itau.clientes rename column endereco to endereco_cliente;
+
+-- permite criar campos na estrutura da nossa tabela
+alter table itau.clientes add endereco_cliente varchar(50) not null;
+alter table itau.clientes add bairro_cliente varchar(20) not null;
+
+-- permite eliminar fisicamente o campo desejado da estrutura da tabela
+alter table itau.clientes drop endereco;
+
+
+-- seleciona todos os campos e registros da tabela
+select * from itau.clientes;
+
+-- seleciona somente os campos desejados na tabela mostrando todos os registros
+select nome_cliente,idade_cliente,email_cliente from itau.clientes order by nome_cliente;
+
+-- seleciona todos os campos da tabela mostrando um range/faixa de registros 
+select * from itau.clientes where idade_cliente>=18 and idade_cliente<=30 order by idade_cliente;
+
+-- mostra o contador de registros conforme a range/faixa pré-definida
+select count(*) as Total_Clientes from itau.clientes where idade_cliente>=18 and idade_cliente<=30;
+
+
+
+-- comando utilizado para criar o database
+-- create database itau;
+-- comando utilizado para por o database em uso
+use itau;
+
+-- permite criar uma tabela no banco de dados 
+create table itau.clientes(
+codigo_cliente integer not null primary key,
+nome_cliente varchar(50) not null,
+idade_cliente integer(3) not null,
+email_cliente varchar(80) not null
+);
+
+-- permite demonstrar todos os registros dentro da nossa tabela
+select * from itau.clientes;
+
+-- mostrar a estrutura da nossa tabela no banco de dados 
+describe itau.clientes;
+
+-- inserindo dados na estrutura da nossa tabela 
+insert into itau.clientes
+(codigo_cliente,nome_cliente,idade_cliente,email_cliente)
+values
+(1,"Daniel Ferrao",25,"daniel.f@unibanco.com.br"),
+(2,"Maria Estella Dias",22,"maria.e@unibanco.com.br"),
+(3,"Simone",24,"simone@unibanco.com.br"),
+(4,"Gabriel",19,"gabriel@unibanco.com.br");

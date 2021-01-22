@@ -1,0 +1,259 @@
+<dependency>
+	<groupId>org.projectlombok</groupId>
+	<artifactId>lombok</artifactId>
+	<version>1.18.16</version>
+</dependency>
+
+-----
+
+# 1 - string de conexão com o BD
+spring.datasource.url= jdbc:mysql://localhost:3306/aula08?useTimezone=true&serverTimezone=UTC
+
+# 2 - usuário do BD
+spring.datasource.username = professor
+
+# 3 - senha do BD
+spring.datasource.password = aula
+
+# 4 - dialeto
+spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL8Dialect
+
+# parâmetros opcionais
+
+#porta do servidor
+#server.port=8081
+
+# exibir as mensagens de SQL
+spring.jpa.show-sql = true
+
+# delegar para o JPA a criação das tabelas
+spring.jpa.hibernate.ddl-auto = update
+
+
+-------------
+
+spring-boot.ls.java.home
+
+-------
+
+https://training.github.com/downloads/pt_BR/github-git-cheat-sheet.pdf
+
+public class Pessoa {
+    // atributos
+    String nome;
+    double salario;
+
+    // métodos
+
+    Pessoa(String n, double s) { // método construtor, obrigatório mesmso nome da classe
+        nome = n;
+        salario = s;
+    }
+
+    void exibirDados() { //método é a definição de uma ação do objeto
+        System.out.println(nome + " : " + salario);
+    }
+
+}
+
+------------
+
+public class App {
+    public static void main(String[] args) {
+        Pessoa pessoa1 = new Pessoa("Emerson", 2000); //criação do objeto, e chamada do construtor
+        Pessoa pessoa2 = new Pessoa("Carlos", 3000); 
+
+        pessoa1.exibirDados();
+        pessoa2.exibirDados();
+    }
+}
+
+------------
+public class Pessoa {
+    //atributos
+    String nome;
+
+    //métodos
+    void apresentar(){
+        System.out.println("Olá! sou " + nome);
+    }
+
+}
+
+---------------
+
+    public static void main(String[] args) {
+        Pessoa pessoa1 = new Pessoa(); // pessoa1 é uma instância (objeto) da classe Pessoa
+        Pessoa pessoa2 = new Pessoa();
+
+        pessoa1.nome = "Emerson"; // atribui o valor 'Emerson' para o atributo 'nome' da 'pessoa1'
+        pessoa1.apresentar();
+        
+        pessoa2.nome = "Paduan";
+        pessoa2.apresentar();
+    }
+
+------------------------------------
+
+
+EXERCÍCIO 02
+
+public class Exercicio02 {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        int n1, n2, n3, menor;
+
+        System.out.println("Digite 3 números inteiros:");
+        n1 = teclado.nextInt();
+        n2 = teclado.nextInt();
+        n3 = teclado.nextInt();
+
+        menor = encontraMenor(n1, n2, n3);
+
+        System.out.println("O menor valor é " + menor);
+
+        teclado.close();
+    }
+
+    public static int encontraMenor(int a, int b, int c) {
+        int menor;
+
+        if (a <= b && a <= c) { // a é menor que o b e o c?
+            menor = a;
+        } else {
+            if (b <= a && b <= c) {
+                menor = b;
+            } else {
+                menor = c;
+            }
+        }
+        return menor;
+    }
+
+    /* Soluções alternativas */
+
+    public static int encontraMenor2(int a, int b, int c) {
+        if (a <= b && a <= c) {
+            return a; // return encerra a execução do método e faz o retorno
+        }
+
+        if (b <= a && b <= c) {
+            return b;
+        }
+
+        return c;
+    }
+
+    public static int encontraMenor3(int a, int b, int c) {
+        int menor = a;
+
+        if (b < menor) {
+            menor = b;
+        }
+
+        if (c < menor) {
+            menor = c;
+        }
+
+        return menor;
+    }
+
+}
+
+
+--------------------
+import java.util.Scanner;
+
+public class Exemplo02 {
+    public static void main(String[] args) { // main = principal
+        Scanner entrada = new Scanner(System.in);
+        int calculo;
+        int numero1;
+
+        System.out.println("Informe um número inteiro:");
+        numero1 = entrada.nextInt();
+
+        calculo = soma(numero1, 5);
+
+        System.out.println(numero1 + " + 5 = " + calculo);
+
+        entrada.close();
+    }
+
+    // recebe 2 valores inteiros e retorna um inteiro
+    public static int soma(int valo1, int valor2) {
+        int resultado;
+
+        resultado = valo1 + valor2;
+
+        return resultado;
+    }
+
+}
+
+
+--------
+
+public class Exemplo01 {
+    public static void main(String[] args) {
+        int comprimento = 30;
+        
+        linha();
+        System.out.println("Meu programa");
+        linha();
+        System.out.println("1 - criar um novo usuário");
+        linha2(25);
+        linha2(comprimento);
+        linha3(15, '*');
+        linha3(20, '_');
+    }
+
+    public static void linha() {
+        System.out.println("------------");
+    }
+
+    public static void linha2(int tamanho) {
+        for (int i = 0; i < tamanho; i++) {
+            System.out.print("-");
+        }
+        System.out.println(); // pula para próxima linha
+    }
+
+    public static void linha3(int tamanho, char tipo) { // char = 1 caracter
+        for (int i = 0; i < tamanho; i++) {
+            System.out.print(tipo);
+        }
+        System.out.println(); 
+    }
+
+}
+
+
+-------
+
+www.urionlinejudge.com.br
+6948
+lgq6lZL
+
+
+"java.home": "C:\\Program Files\\Java\\jdk-14.0.1"
+
+
+gi
+
+------
+
+        if (salario < 600) {
+            System.out.println("isento");
+        } else { // else (salario > 600) {
+            if (salario <= 1200) {  // } if (salario <= 1200) {
+                System.out.println("20%");
+            } else { // } else (salario > 1200) {
+
+                if (salario <= 2000) {   // } if (salario <=200) {
+                    System.out.println("25%");
+                } else { // daqui pra baixo adicionei
+                    System.out.println("30%");
+                }
+            }
+        }

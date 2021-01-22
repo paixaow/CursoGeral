@@ -1,0 +1,117 @@
+https://github.com/Didox/app-com-turma13b-itau
+
+
+
+https://github.com/Didox/itau-turma-13b-php
+
+
+
+
+https://github.com/Didox/treinamento-itau-turma-13c
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: GIT ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+git init               | inicia um repositório
+git status          | diferença de alterações
+git add .           | Adiciona os arquivos para versionamento
+git commit -m "versionando pela primeira vez com a turma 13c"         | cria o commit vinculando uma mensagem
+SHA1 do git representa 1 commit
+
+git remote add origin git@github.com:Didox/treinamento-itau-turma13c.git   | faz vinculo do meu repo git local com a núvem
+
+git branch -M main   | cria o branch princial
+git push -u origin main  | faz upload do branch princial
+git push         | faz upload das alterações
+git pull            | faz download das informações
+git clone         | faz o download pela primeira fez da nuvem para sua máquina
+
+
+git remote add origin git@github.com:[SEU USUARIO]/[SEU REPO]
+git branch -M main
+git push -u origin main
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: Dev Ops ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::: Aulas ::::
+https://www.torneseumprogramador.com.br/aula?id=kRy_VVLWtf4&aula=41&tipo=back-end&professor=Danilo - HTTP
+
+https://www.torneseumprogramador.com.br/aula?id=5nkXtES7Mrg&aula=75&tipo=c-sharp&professor=Danilo -- deploy tradicional na AWS
+http://www.torneseumprogramador.com.br/
+http://www.torneseumprogramador.com.br/busca?q=deploy
+http://www.torneseumprogramador.com.br/aula?id=JiyKMqVfP1M&aula=20&tipo=back-end&professor=Danilo
+http://www.torneseumprogramador.com.br/aulas/integracao-continua
+http://www.torneseumprogramador.com.br/aulas/cache
+http://www.torneseumprogramador.com.br/busca?q=bdd
+http://www.torneseumprogramador.com.br/busca?q=tdd
+http://www.torneseumprogramador.com.br/aula?id=5nkXtES7Mrg&aula=75&tipo=c-sharp&professor=Danilo
+
+https://giovannireisnunes.wordpress.com/2017/02/17/jenkins-parte-1/ - install jenkins
+
+
+:::: Serviços ::::
+https://www.toptal.com/developers/gitignore
+https://heroku.com/
+https://github.com/
+https://www.freemysqlhosting.net/
+https://chromedriver.chromium.org/downloads
+
+
+:::: Projetos ::::
+https://github.com/Didox/turma11a-itau
+https://github.com/Didox/kitutes-donate-treinamento-itau
+https://github.com/Didox/validar-cpf-back-spring-boot
+https://github.com/Didox/validar-cpf-front-js-vanilla
+https://github.com/torneseumprogramador/projeto-itaumon-api-itau-java-spring
+https://github.com/torneseumprogramador/itaumonfront-spring-boot
+https://github.com/Didox/turma_devops
+https://github.com/Didox/validador-itau-nodejs
+
+
+:::: ATIVIDADE ::::
+1 ) criar uma pasta em seu computador
+2 ) criar um arquivo chamado index.php dentro desta pasta, "dentro do arquivo uma frase que seja inspiradora para você"
+3 ) rodar os comandos: 
+   git init
+   git add .
+   git commit -am "mandando dado para deploy"
+   heroku create nome_da_app_de_vcs
+   git push heroku master
+
+
+:::::: Scripts :::::
+git init
+git clone URL
+cd diretorio
+code .
+heroku login -i
+heroku create java-spring-danilo
+git push heroku master
+git push heroku main
+git add .
+git commit -am "criando rota"
+git push heroku master
+npm install
+npm start
+npm run tdd
+npm run bdd
+
+cd diretorio
+mkdir pasta1
+
+build > tdd > bdd > dev > homolog, prod
+git pull --force
+npm install
+npm run tdd
+START /B npm start 2>&1
+npm run bdd
+
+heroku git:remote -a dev-validador-12a
+
+
+::::::: Downloads ::::::
+https://devcenter.heroku.com/articles/heroku-cli
+https://nodejs.org/en/download/
+https://www.jenkins.io/download/
+https://github.com/cucumber/cucumber-js/blob/master/docs/support_files/timeouts.md
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
